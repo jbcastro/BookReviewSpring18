@@ -1,0 +1,42 @@
+﻿@model BookReviewSpring18.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BookTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookEntryDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookEntryDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookISBN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookISBN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BookKey }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
